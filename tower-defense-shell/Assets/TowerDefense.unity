@@ -6818,6 +6818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4642887206688344, guid: ad1737390841fae418d2bd0c66907707,
     type: 2}
+  spawnPoint: {fileID: 1064367398}
   timeBetweenWaves: 7.5
 --- !u!4 &1125082958
 Transform:
