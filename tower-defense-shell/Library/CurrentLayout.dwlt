@@ -289,10 +289,10 @@ MonoBehaviour:
     height: 758
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e15ffff
-    m_LastClickedID: 0
-    m_ExpandedIDs: 86fbffff00000000e6290000
+    scrollPos: {x: 0, y: 2987}
+    m_SelectedIDs: ec270000
+    m_LastClickedID: 10220
+    m_ExpandedIDs: 647cffffecf2ffff86fbffff00000000ea290000ca2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,18 +388,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\code\unity\tower-defense-unity\tower-defense-shell
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e42b0000
-    m_LastClickedID: 11236
+    m_SelectedIDs: 5e270000
+    m_LastClickedID: 10078
     m_ExpandedIDs: 000000005e270000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -588,14 +588,14 @@ MonoBehaviour:
     height: 378
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 244.87165087179486
+  lastFramingTime: 536.8535294358974
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 25.323711, y: 10.927394, z: 67.08224}
+    m_Target: {x: 66.72816, y: 2.3543167, z: 3.4094796}
     speed: 2
-    m_Value: {x: 25.323711, y: 10.927394, z: 67.08224}
+    m_Value: {x: 66.72816, y: 2.3543167, z: 3.4094796}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -619,13 +619,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.35992098, y: -0.57190293, z: 0.30717772, w: 0.67009795}
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: 0.35992, y: -0.5719014, z: 0.3071769, w: 0.6700961}
+    m_Value: {x: -0.7071069, y: -0, z: -0, w: -0.7071069}
   m_Size:
-    m_Target: 3.0011268
+    m_Target: 22
     speed: 2
-    m_Value: 3.0011268
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2
