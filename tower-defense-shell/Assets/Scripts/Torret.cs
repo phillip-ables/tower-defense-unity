@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 //finding a target(within a range and the nearest target) -> then rotating to aim at the target
 public class Torret : MonoBehaviour {
-    public Transform target; //store current target in a private variable
+    private Transform target; //store current target in a private variable
     public float range = 15f;
 
     public string enemyTag = "Enemy";
+
+    public Transform partToRotate;
 
     void Start()
     {
@@ -31,6 +33,10 @@ public class Torret : MonoBehaviour {
         {
             target = nearestEnemy.transform;
         }
+        else
+        {
+            target = null;
+        }
     }
 
     void Update()
@@ -38,7 +44,10 @@ public class Torret : MonoBehaviour {
         if (target == null) //if no target, dont do a thing
             return;
 
-
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = lookRotation.eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f,rotation.y, 0f);
     }
     //have unity display the range using gizmo
     private void OnDrawGizmosSelected()
