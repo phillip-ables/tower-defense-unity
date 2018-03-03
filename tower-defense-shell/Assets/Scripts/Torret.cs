@@ -7,6 +7,7 @@ public class Torret : MonoBehaviour {
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
+    public float turnSpeed = 10f;
 
     void Start()
     {
@@ -46,7 +47,7 @@ public class Torret : MonoBehaviour {
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = lookRotation.eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f,rotation.y, 0f);
     }
     //have unity display the range using gizmo
