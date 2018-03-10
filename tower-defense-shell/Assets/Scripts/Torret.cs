@@ -2,14 +2,15 @@
 //finding a target(within a range and the nearest target) -> then rotating to aim at the target
 public class Torret : MonoBehaviour {
     private Transform target; //store current target in a private variable
-    public float range = 15f; 
+    public float range = 15f;
+    public float fireRate = 1f; // we will fire one
+    private float fireCountdown = 0f;  //after we fire on it will be set to one divided by fireRate
+
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
     public float turnSpeed = 10f;
-
-    public float fireRate = 1f; // we will fire one 
 
     void Start()
     {
@@ -51,7 +52,20 @@ public class Torret : MonoBehaviour {
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f,rotation.y, 0f);
+
+        if (fireCountdown <= 0f)  //if time to shoot
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
     }
+    void Shoot()
+    {
+        Debug.Log("Shoot!");
+    }
+
     //have unity display the range using gizmo
     private void OnDrawGizmosSelected()
     {
