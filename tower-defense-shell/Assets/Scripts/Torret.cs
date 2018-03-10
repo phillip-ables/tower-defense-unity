@@ -71,7 +71,11 @@ public class Torret : MonoBehaviour {
     }
     void Shoot()
     {
-        Debug.Log("Shoot!");
+        GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGo.GetComponent<Bullet>();
+
+        if (bullet != null)
+            bullet.Seek(target);
     }
 
     //have unity display the range using gizmo
