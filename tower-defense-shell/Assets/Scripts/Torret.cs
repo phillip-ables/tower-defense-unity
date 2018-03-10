@@ -2,16 +2,24 @@
 //finding a target(within a range and the nearest target) -> then rotating to aim at the target
 public class Torret : MonoBehaviour {
     private Transform target; //store current target in a private variable
+
+    [Header("Attributes")]
+
     public float range = 15f;
     public float fireRate = 1f; // we will fire one
     private float fireCountdown = 0f;  //after we fire on it will be set to one divided by fireRate
 
+    [Header("Unity Setup Fields")]
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
     public float turnSpeed = 10f;
 
+    public GameObject bulletPrefab;
+    public Transform firePoint; //spawn inside the turret will look super wierd
+
+    //Use this for initialization
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
