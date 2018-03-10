@@ -2,12 +2,14 @@
 //finding a target(within a range and the nearest target) -> then rotating to aim at the target
 public class Torret : MonoBehaviour {
     private Transform target; //store current target in a private variable
-    public float range = 15f;
+    public float range = 15f; 
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
     public float turnSpeed = 10f;
+
+    public float fireRate = 1f; // we will fire one 
 
     void Start()
     {
