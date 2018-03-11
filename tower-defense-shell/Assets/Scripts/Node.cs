@@ -10,14 +10,21 @@ public class Node : MonoBehaviour {
     private Renderer rend;
     private Color startColor;
 
+    BuildManager buildManager;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        buildManager = BuildManager.instance;
     }
 
     void OnMouseDown()
     {
+        if (buildManager.GetTurretToBuild() == null)
+            return;
+
         if (turret != null)
         {
             Debug.Log("Can't Build there! - TODO: Display on screen.");
@@ -26,12 +33,13 @@ public class Node : MonoBehaviour {
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
-
-
     }
 
     void OnMouseEnter() // built in unity callback like update
     {
+        if (buildManager.GetTurretToBuild() == null)
+            return;
+
         //everytime the mouse enters the collider
         rend.material.color = hoverColor;
     }
