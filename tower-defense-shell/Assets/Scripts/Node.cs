@@ -23,7 +23,9 @@ public class Node : MonoBehaviour {
             return;
         }
 
-        //Build a turret
+        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        turret = (Instantiate(turretToBuild, transform.position, transform.rotation));
+
 
     }
 
